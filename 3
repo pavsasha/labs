@@ -1,0 +1,31 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+#define A 3
+#define B 3
+
+
+int main()
+{
+    system("chcp 1251");
+    system("cls");
+    cout << "Введите элементы матрицы:" << endl;
+    int a[A][B];
+    for (int i = 0; i < A; i++) {
+        for (int j = 0; j < B; j++) {
+            cin >> a[i][j];
+        }
+    }
+    printf("\n");
+    for (int i = 0; i < A; i++) {
+        for (int j = 0; j < B; j++) {
+            cout << a[i][j];
+        }
+        printf("\n");
+    }
+    int opr = a[0][0] * a[1][1] * a[2][2] + a[0][1] * a[1][2] * a[2][0] + a[0][2] * a[1][0] * a[2][1] - a[2][0] * a[1][1]*a[0][2]-a[1][0]*a[0][1]*a[2][2]-a[0][0]*a[2][1]*a[1][2];
+    cout << "Определитель матрицы:" << endl;
+    cout << opr << endl;
+    return 0;
+}
