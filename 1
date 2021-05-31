@@ -1,0 +1,17 @@
+#include <iostream>
+ 
+int main()
+{
+    const int size=10;
+    int arr[size]={5,16,34,67,8,15,2,17,1,10};
+    for(int i=0;i<size;i++)
+    {
+        std::cout<<arr[i]<<' ';
+        if(arr[i] % 2 == 0)
+            std::cout<<0<<std::endl;
+        else
+            std::cout<<arr[i]<<std::endl;
+    }
+    system("pause");
+    return 0;
+}
