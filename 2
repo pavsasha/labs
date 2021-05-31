@@ -1,0 +1,41 @@
+#include <iostream>
+#pragma warning(disable: 4996)
+#include <string>
+using namespace std;
+
+int main()
+{
+setlocale(LC_ALL, "russian");
+int num, nomer=0;
+num = 0;
+char symbol;
+cout << "Введите символ: ";
+cin >> symbol;
+if ((symbol >= 97 && symbol <= 113) || (symbol >= 65 && symbol <= 91) || symbol == 32)
+{
+cout << "Введенный элемент является символом";
+}
+else
+{
+cout << "Введенный элемент не является символом";
+}
+cout << endl;
+string str;
+cout << "Введите строку: " << str;
+cin >> str;
+if (str.length() > 1) {
+cout << "Является строкой" << endl;
+for (int i = 0; i < str.length(); i++)
+{
+num = num + 1;
+if (str[i] == symbol)
+{
+nomer = num;
+}
+
+}
+if (nomer == 0) { cout << "No symbol found"; }
+else { cout << "Номер символа в строке " << nomer; }
+}
+else { cout << "Не является строкой"; }
+}
